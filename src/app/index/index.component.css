@@ -115,7 +115,7 @@ nav{
     gap: 2rem;    
     transition: transform.5s;
     z-index: -1;
-    justify-content: flex-start; /* Alineación a la izquierda */
+    justify-content: flex-start;
 }
 .nav_links.open{
     transform:translateY(100%);
@@ -123,11 +123,12 @@ nav{
 .nav_links a{
     font-weight: 600;    
     white-space: nowrap;
+    color: black !important;
     margin: 0 1rem; /* Espacio entre los enlaces */
     font-size: 1rem; /* Tamaño de la fuente de los enlaces */
 }
 .nav_links a:hover{
-    color:var(--text-dark);
+    color:var(--primary-color-dark);
 }
 .nav_btns{
     display: flex; /* Muestra los elementos en línea */

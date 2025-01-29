@@ -24,13 +24,13 @@
         <li><a href="#home">HOME</a></li>
         <li id="usuarios-option"><a href="lista.html">USUARIOS</a></li>
         <li><a href="#canchas">CANCHAS</a></li>
-        <li><a href="Nosotros.html">NOSOTROS</a></li>
-        <li><a href="Nosotros.html">NOSOTROS</a></li>
-        
+        <li><a routerLink="/nosotros" routerLinkActive="active" ariaCurrentWhenActive="page">NOSOTROS</a></li>
+        <li><a href="Nosotros.html">NOSOTROS</a></li> 
     </ul>
+    
     <div class="nav_btns">
         <span id="welcome-message" style="margin-right: 10px;"></span>
-        <button id="login-btn" class="btn">Login</button>
+        <button id="login-btn" class="btn" (click)="goToLogin()">Login</button>
         <button id="logout-btn" class="btn" style="display: none;">Cerrar Sesión</button>
     </div>
 </nav>

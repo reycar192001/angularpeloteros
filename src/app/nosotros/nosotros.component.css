@@ -1,0 +1,590 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Cabin:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+:root{
+    --primary-color: #3f8310;
+    --primary-color-dark:#408f28;
+    --text-dark:#0a0a0a;
+    --text-light:#737373;
+    --extra-light: #f3f4f6;
+    --white: #ffffff;
+    --max-width:1200px;
+}
+
+*{
+    margin: 0;    
+    box-sizing: border-box;
+}
+
+.section_container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section_header{
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.section_description{
+    max-width: 600px;
+    margin-inline: auto;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.btn{
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    white-space: nowrap;
+    color: var(--white);
+    background-color: var(--text-dark);
+    border-radius: 5rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--primary-color-dark);
+}
+
+.logo{
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+img{
+    display: flex;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul{
+    list-style: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "DM Sans",sans-serif;
+}
+
+nav{    
+    isolation:isolate;   
+    width: 100%;    
+}
+
+.nav_header{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.nav_logo .logo{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.nav_menu_btn{
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav_links{     
+    display: flex;
+    align-items: center;    
+    gap: 2rem;    
+    transition: transform.5s;
+    z-index: -1;
+    justify-content: flex-start;
+}
+.nav_links.open{
+    transform:translateY(100%);
+}
+.nav_links a{
+    font-weight: 600;    
+    white-space: nowrap;
+    color: black !important;
+    margin: 0 1rem; /* Espacio entre los enlaces */
+    font-size: 1rem; /* Tamaño de la fuente de los enlaces */
+}
+.nav_links a:hover{
+    color:var(--primary-color-dark);
+}
+.nav_btns{
+    display: flex; /* Muestra los elementos en línea */
+    align-items: center; /* Centra verticalmente */
+    gap: 1rem; /* Espacio entre los elementos */
+}
+#welcome-message {
+    color: black; /* Mismo color que el texto del nav */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    font-weight: 600; /* Agrega peso al texto */
+}
+
+#login-btn,
+#logout-btn {
+    padding: 0.5rem 1rem; /* Ajuste del tamaño del botón */
+    font-size: 0.9rem; /* Tamaño del texto del botón */
+    border-radius: 20px; /* Botones más redondeados */
+    background-color: var(--text-dark); /* Color de fondo del botón */
+    color: var(--white); /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor al pasar sobre el botón */
+    transition: background-color 0.3s;
+}
+
+#login-btn:hover,
+#logout-btn:hover {
+    background-color: var(--primary-color-dark); /* Color de hover */
+}
+
+/*----------------------------------------------------------------*/
+
+@media (width > 540px) {
+    .destination__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media(width > 768px){
+    nav{
+        position: static;
+        padding: 2rem 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .nav_header{
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+    .nav_logo .logo{
+        color: var(--text-dark);
+    }
+    .nav_menu_btn{
+        display: none;
+    }
+    .nav_links{
+        position: static;
+        width: fit-content;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none !important;
+    }
+    .nav_links a{
+        color: var(--text-dark);
+    }
+
+    .nav_links a:hover{
+        color: var(--primary-color);
+    }
+    .nav_links li:last-child{
+        display: none;
+    }
+    .nav_btns {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav_btns button{
+        padding: 0.75rem 2rem;
+        background-color: var(--text-dark);
+    }
+}
+/*-------------------------------*/
+.banner{
+    display:flex; /* Alinea los elementos en una fila */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: flex-start; /* Alinea a la izquierda */
+    gap: 20px;
+    margin-top: 100px;
+    margin-left: 300px;
+}
+
+.banner .slider{
+    position: absolute;
+    width: 110px; /* Reduce el tamaño del slider */
+    height: 150px; /* Ajusta la altura */
+    top: 25%;
+    left: 350px; /* Alinea el slider a la izquierda */
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;  
+    margin-top: 80px;
+}
+
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-8deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-8deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:  
+        rotateY(calc( ( var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(200px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.banner .slider .item img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.banner .content {
+    margin-left: 400px; /* Espacio entre el slider y el contenido */
+    max-width: 500px;
+    text-align: justify;
+    line-height: 1.6; 
+}
+
+.banner .content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.banner .content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.banner .content h1{
+    font-family: "ICA Rubrik";
+    font-size: 10em;
+    line-height: 1em;
+    color: #000;
+    position: relative;
+    bottom: 100px;
+}
+
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+    
+}
+
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 300px;
+}
+
+.banner .content h2{
+    font-family: Poppins;
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+
+/*-------------------------------------------------------------------*/
+/* Estilo general del contenedor del mapa */
+.mapa-container {
+    text-align: center; /* Centra el título y el mapa */
+    margin: 100px auto 50px auto;
+}
+
+/* Título encima del mapa */
+.mapa-container h3 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: Poppins;
+    color: #333; /* Cambia el color del título si lo deseas */
+}
+
+/* Contenedor del mapa con efectos de borde y sombra */
+.mapa {
+    width: 600px;
+    height: 450px;
+    overflow: hidden; /* Esconde los bordes del iframe si sobresalen */
+    border-radius: 15px; /* Redondea los bordes */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Añade sombra para un efecto de difuminado */
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+.mapa:hover {
+    transform: scale(1.05); /* Levemente agranda el mapa al pasar el ratón */
+}
+
+/* Estilos específicos para el iframe */
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remueve el borde por defecto del iframe */
+    border-radius: 15px; /* Aplica bordes redondeados al iframe */
+}
+
+/*-------------------------------------------------------------------*/
+
+.card-container {
+    font-family: 'DM Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 100px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px; /* Esto permite que el flip se vea correctamente */
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra */
+    transition: transform 0.6s; /* Transición suave para el giro */
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #e8f5e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    border-radius: 10px;
+}
+
+.card-back {
+    background-color: #e8f5e9;
+    text-align: justify;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg); /* Gira la parte trasera para que esté oculta inicialmente */
+}
+
+.card:hover .card-front {
+    transform: rotateY(180deg); /* Gira la parte frontal cuando se pasa el cursor */
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg); /* Muestra la parte trasera */
+}
+
+/*----------------------------------------------------------------*/
+footer{
+    width: 100%;
+    position: absolute;
+    /*bottom: 0;*/
+    background: linear-gradient(to right, #245c22,#4a7c4b, #484946);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    border-top-right-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Poppins;
+}
+
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+    flex-basis: 15%;
+}
+
+.logo{
+    width: 90px;
+    margin-bottom: 30px;
+    margin-left: 70px;
+}
+
+.col p{
+    text-align: justify;
+}
+
+.col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #fff;
+    margin: 20px 0;
+}
+
+ul li{
+    list-style: none;
+    
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 50px;
+}
+
+form .ri-mail-line{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input{
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    outline: none;
+}
+
+input[type="email"]::placeholder {
+    color: #fff;
+}
+
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .ri-arrow-right-line{
+    font-size: 16px;
+    color: #fff;
+}
+
+.social-icons i{
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    color: #000;
+    background: #DAF7A6 ;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 25%;
+    }
+    
+    .col:nth-child(2), .col:nth-child(3){
+        flex-basis: 15%;
+    }
+}
+/*----------------------------------------------------------------*/
